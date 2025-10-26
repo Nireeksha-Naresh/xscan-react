@@ -26,3 +26,16 @@ A simple React app to upload X-ray images and detect possible bone fractures (de
 ```bash
 git clone https://github.com/username/xscan-react.git
 cd xscan-react
+
+
+Folder Structure
+xscan-react/
+│
+├─ public/           # Static files
+├─ src/
+│   ├─ App.js        # Main React component
+│   ├─ style.css     # App styles
+│   └─ index.js      # React entry point
+├─ package.json      # Project dependencies
+└─ README.md
+
