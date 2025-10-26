@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; font-family:'Poppins', sans-serif; }
+body, html, #root { min-height:100%; }
+
+.light-theme { background: #f0f0f0; color:#222; }
+.dark-theme { background: #121212; color:#f0f0f0; }
+
+/* Welcome page */
+.welcome-page { display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; position:relative; text-align:center; padding:20px; }
+.top-right { position:absolute; top:20px; right:20px; }
+.settings-btn { padding:10px; border:none; border-radius:50%; cursor:pointer; background-color:#4fc3f7; color:#fff; font-size:1.2rem; }
+
+.welcome-content h1 { font-size:3rem; color:#81d4fa; margin-bottom:10px; text-shadow:0 0 15px #81d4fa30; }
+.tagline { font-size:1.3rem; margin-bottom:30px; color:#cfd8dc; }
+.start-btn { padding:15px 40px; font-size:1.1rem; font-weight:600; border:none; border-radius:50px; background:linear-gradient(90deg,#ff8a65,#ff5722); color:#fff; cursor:pointer; transition:.3s; }
+.start-btn:hover { background:linear-gradient(90deg,#ff5722,#ff8a65); }
+.optional-login { margin-top:15px; color:#81d4fa; font-size:0.9rem; }
+
+/* App page */
+.app { text-align: center; padding: 30px 20px; min-height: 100vh; }
+
+.header { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: auto; }
+.header h1 { color:#81d4fa; font-size:2rem; }
+.welcome-msg { margin-bottom:20px; font-weight:600; }
+
+.upload-card { margin:20px auto; padding:30px; max-width:350px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.5); background-color:rgba(255,255,255,0.05);}
+.upload-card input[type="file"] { display:none; }
+.upload-btn { display:inline-block; padding:12px 25px; background: linear-gradient(90deg,#4fc3f7,#0288d1); color:#fff; border-radius:50px; cursor:pointer; font-weight:600; transition:.3s; }
+.upload-btn:hover { background: linear-gradient(90deg,#0288d1,#81d4fa); }
+
+.preview-card { margin:20px auto; padding:20px; max-width:400px; border-radius:15px; background-color:rgba(255,255,255,0.05); box-shadow:0 5px 15px rgba(0,0,0,0.5); }
+.preview-card img { width:100%; border-radius:10px; }
+
+.analyze-btn { margin-top:25px; padding:12px 35px; background:linear-gradient(90deg,#ff8a65,#ff5722); color:#fff; border:none; border-radius:50px; cursor:pointer; font-weight:600; font-size:1rem; transition:.3s; }
+.analyze-btn:hover { background:linear-gradient(90deg,#ff5722,#ff8a65); }
+
+.result-card { margin:30px auto; padding:25px; max-width:400px; border-radius:15px; background-color:rgba(255,255,255,0.05); box-shadow:0 5px 20px rgba(0,0,0,0.5); }
+.result-text { font-size:1.2rem; font-weight:600; margin-bottom:15px; color:#ffcc80; }
+
+.prob-bar { height:20px; width:100%; background-color:#333; border-radius:10px; overflow:hidden; }
+.prob-fill { height:100%; background-color:#4fc3f7; border-radius:10px 0 0 10px; transition: width .8s ease-in-out; }
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.6); display:flex; justify-content:center; align-items:center; z-index:100;
+}
+
+/* Modal box */
+.modal {
+  background: #1e1e1e; color:#fff; padding:30px; border-radius:15px;
+  width:320px; max-width:90%; box-shadow:0 10px 30px rgba(0,0,0,0.7);
+  display:flex; flex-direction:column; gap:15px;
+}
+.modal h2 { margin-bottom:10px; color:#81d4fa; text-align:center; }
+
+.modal-row { display:flex; justify-content:space-between; align-items:center; }
+.modal-row label { font-weight:600; }
+.modal-row input[type="text"] { padding:8px; border-radius:8px; border:none; width:140px; }
+
+.toggle-btn { padding:5px 12px; border:none; border-radius:50px; cursor:pointer; background:#4fc3f7; color:#fff; font-weight:600; }
+
+.close-btn { padding:10px; border:none; border-radius:50px; cursor:pointer; background:#ff5722; color:#fff; font-weight:600; margin-top:10px; }
+.close-btn:hover { background:#ff8a65; }
+
+/* History card */
+.history-card { margin-top:30px; padding:20px; max-width:400px; margin-left:auto; margin-right:auto;
+  border-radius:15px; background-color:rgba(255,255,255,0.05); box-shadow:0 5px 20px rgba(0,0,0,0.5); }
+.history-card h3 { margin-bottom:10px; color:#81d4fa; }
+.history-card ul { list-style:none; padding-left:0; }
+.history-card li { padding:5px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
